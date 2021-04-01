@@ -7,6 +7,6 @@ RUN apt update && apt install -y curl postgresql-client python3 python3-kubernet
         && apt-get autoremove --yes \
         && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-RUN addgroup adarga && adduser --system --home /app --ingroup adarga adarga && chown -R adarga:adarga /app
-USER adarga
+RUN addgroup g && adduser --system --home /app --ingroup g u && chown -R u:g /app
+USER u
 WORKDIR /app
